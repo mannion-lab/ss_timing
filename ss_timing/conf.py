@@ -5,6 +5,7 @@ import numpy as np
 
 import exp_input
 import stimuli.psi
+import stimuli.utils
 
 
 class ConfigContainer(object):
@@ -57,6 +58,7 @@ def get_conf(subj_id):
 
     conf.monitor_name = "1018_12_dpp"
     conf.monitor_res = (1920, 1080)
+    conf.monitor_mode = "mono++"
 
     # 12 * (1/120) = 100ms
     conf.pres_frames = 12
@@ -67,10 +69,10 @@ def get_conf(subj_id):
 
     # visibility train for the pre-surround condition
     surr_pre_train = np.zeros(conf.vis_train_frames)
-    surr_pre_train[:pres_frames] = 1
+    surr_pre_train[:conf.pres_frames] = 1
 
     surr_sim_train = np.zeros(conf.vis_train_frames)
-    surr_sim_train[-pres_frames:] = 1
+    surr_sim_train[-conf.pres_frames:] = 1
 
     assert np.sum(surr_pre_train) == np.sum(surr_sim_train)
 
@@ -102,6 +104,14 @@ def get_conf(subj_id):
     conf.surr_contrast = 0.25
 
     conf.fix_diam_va = 0.25
+
+    fb_ecc = conf.target_ecc_dva + conf.target_diam_dva / 2.0
+    conf.fb_positions = {
+        "NE": stimuli.utils.pol_to_cart(45, fb_ecc),
+        "NW": stimuli.utils.pol_to_cart(135, fb_ecc),
+        "SW": stimuli.utils.pol_to_cart(225, fb_ecc),
+        "SE": stimuli.utils.pol_to_cart(315, fb_ecc)
+    }
 
     conf.pre_s = 0.25
     conf.on_s = 0.25
