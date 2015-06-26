@@ -101,22 +101,6 @@ def get_conf(subj_id):
     conf.surr_diam_dva = 20.0
     conf.surr_contrast = 0.25
 
-    conf.gp_radius_deg = 7.0
-    # deg/sq
-    conf.gp_density_deg_sq = 40.0
-    conf.gp_n_dots = conf.gp_radius_deg ** 2 * conf.gp_density_deg_sq
-    conf.gp_n_dipoles = np.round(conf.gp_n_dots).astype("int")
-    conf.gp_pole_sep_deg = 0.15
-    conf.gp_dot_size_deg = 0.25
-    # this is the point of full contrast; the mask starts at this minus the
-    # fringe width
-    conf.gp_mask_in_deg = 2.0
-    # this is the maximum extent of the mask, including the fringe
-    conf.gp_mask_out_deg = conf.gp_radius_deg
-    conf.gp_mask_fringe_deg = 1.0
-
-    conf.ref_len_deg = 0.5
-
     conf.fix_diam_va = 0.25
 
     conf.pre_s = 0.25
@@ -124,42 +108,26 @@ def get_conf(subj_id):
     conf.min_iti = 1.5
 
     conf.psych_func = functools.partial(
-        stimuli.psi.logistic,
-        lapse_rate=0.04,
-        guess_rate=0.04
+        stimuli.psi.weibull,
+        lapse_rate=0.02,
+        guess_rate=0.25  # 4AFC
     )
 
-    # the staircase parameters depend on the GP type
-    if conf.gp_type == "trans":
-        # staircase potential stimulus levels
-        conf.x_levels = np.linspace(45.0, 90.0, 90, endpoint=True)
-        # potential alpha levels
-        conf.alpha_levels = np.arange(45.0, 90.0, 0.5)
-        # potential beta levels
-        conf.beta_levels = np.logspace(
-            np.log10(0.05),
-            np.log10(1),
-            100
-        )
-    else:
-        # staircase potential stimulus levels
-        conf.x_levels = np.linspace(0, 90.0, 90, endpoint=True)
-        # potential alpha levels
-        conf.alpha_levels = np.arange(0, 90.0, 0.5)
-        # potential beta levels
-        conf.beta_levels = np.logspace(
-            np.log10(0.025),
-            np.log10(1),
-            100
-        )
+    conf.x_levels = np.linspace(0.001, 0.5, 500)
+    conf.alpha_levels = np.linspace(0.001, 0.5, 500)
+    conf.beta_levels = np.logspace(
+        np.log10(0.5),
+        np.log10(20.0),
+        100
+    )
 
     conf.resp_map = {
-        ("P", "left"): ("S", 0),  # polar, left is starburst
-        ("P", "right"): ("C", 1),  # polar, right is concentric
-        ("T", "left"): ("V", 1),  # trans, left is vertical
-        ("T", "right"): ("O", 0)  # trans, right is oblique
+        9: "NE",
+        7: "NW",
+        1: "SW",
+        3: "SE"
     }
 
-    conf.min_time_between_runs = 30.0
+    conf.min_time_between_runs_s = 30.0
 
     return conf
