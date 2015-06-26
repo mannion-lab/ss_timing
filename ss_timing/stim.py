@@ -1,6 +1,3 @@
-import collections
-import os
-
 import psychopy.visual
 
 import stimuli.psychopy_ext
@@ -58,7 +55,8 @@ def get_stim(conf, win):
             font="wingdings",
             text=u"\uF0FC",
             pos=conf.fb_positions[fb_pos],
-            height=1.0
+            height=1.0,
+            autoLog=False
         )
         for fb_pos in conf.fb_positions.keys()
     }
@@ -69,7 +67,8 @@ def get_stim(conf, win):
             font="wingdings",
             text=u"\uF0FB",
             pos=conf.fb_positions[fb_pos],
-            height=1.0
+            height=1.0,
+            autoLog=False
         )
         for fb_pos in conf.fb_positions.keys()
     }
@@ -90,6 +89,5 @@ def get_stim(conf, win):
         units="pix",
         size=conf.monitor_res
     )
-
 
     return stim
