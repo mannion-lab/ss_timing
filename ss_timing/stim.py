@@ -24,14 +24,16 @@ def get_stim(conf, win):
         radius=[conf.surr_diam_pix / grating_size] * 2
     )
 
+
     stim["surr"] = psychopy.visual.GratingStim(
         win=win,
-        tex=grating,
-        mask=surr_mask,
-        units="pix",
-        size=[grating_size] * 2,
+        tex="sin",
+        mask="raisedCos",
+        units="deg",
         pos=[0.0, 0.0],
-        ori=45.0,  # will be updated
+        size=[conf.surr_diam_dva] * 2,
+        sf=[conf.surr_cpd, 1],
+        ori=0.0,  # will be updated
         phase=0.0,  # will be updated
         contrast=conf.surr_contrast,
         autoLog=False
@@ -45,7 +47,7 @@ def get_stim(conf, win):
             units="deg",
             pos=conf.target_positions[target_pos],
             size=[conf.target_diam_dva] * 2,
-            sf=conf.grating_cpd,
+            sf=[conf.grating_cpd, 1],
             ori=stimuli.utils.math_to_nav_polar(conf.target_ori),
             phase=0.0,  # will be updated
             contrast=0.0,  # will be updated
