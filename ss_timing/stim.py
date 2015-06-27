@@ -29,7 +29,7 @@ def get_stim(conf, win):
             units="deg",
             pos=conf.target_positions[target_pos],
             size=[conf.target_diam_dva] * 2,
-            sf=conf.target_dva,
+            sf=conf.target_cpd,
             ori=stimuli.utils.math_to_nav_polar(conf.target_ori),
             phase=0.0,  # will be updated
             contrast=0.0,  # will be updated
