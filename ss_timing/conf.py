@@ -3,6 +3,9 @@ import socket
 
 import numpy as np
 
+import psychopy.monitors
+import psychopy.misc
+
 import exp_input
 import stimuli.psi
 import stimuli.utils
@@ -57,7 +60,16 @@ def get_conf(subj_id):
     conf.n_trials_overall = conf.n_trials_per_run * conf.n_runs
 
     conf.monitor_name = "1018_12_dpp"
-    conf.monitor_res = (1920, 1080)
+    conf.monitor = psychopy.monitors.Monitor(conf.monitor_name)
+    conf.monitor_res_pix = (1920, 1080)
+    conf.monitor_res_dva = [
+        psychopy.misc.pix2deg(res, conf.monitor)
+        for res in conf.monitor_res_pix
+    ]
+    conf.monitor_dpp = (
+        float(conf.monitor_res_dva[0]) /
+        conf.monitor_res_pix[0]
+    )
     conf.monitor_mode = "mono++"
     conf.monitor_port = "/dev/dpp"
 
@@ -90,8 +102,19 @@ def get_conf(subj_id):
 
     # stimulus parameters
 
-    conf.target_cpd = 1.0
+    conf.surr_diam_dva = 20.0
+    conf.surr_diam_pix = np.round(
+        psychopy.misc.deg2pix(conf.surr_diam_dva, conf.monitor)
+    )
+
+    conf.grating_cpd = 1.0
+    # grating cycles per pixel
+    conf.grating_cpp = (1.0 / conf.grating_cpd) / conf.monitor_dpp
+
     conf.target_diam_dva = 3.0
+    conf.target_diam_pix = np.round(
+        psychopy.misc.deg2pix(conf.target_diam_dva, conf.monitor)
+    )
     conf.target_ecc_dva = 5.0
     conf.target_positions = {
         "NE": stimuli.utils.pol_to_cart(45, conf.target_ecc_dva),
@@ -106,7 +129,7 @@ def get_conf(subj_id):
 
     conf.fix_diam_va = 0.25
 
-    fb_ecc = conf.target_ecc_dva + conf.target_diam_dva / 2.0
+    fb_ecc = conf.target_ecc_dva
     conf.fb_positions = {
         "NE": stimuli.utils.pol_to_cart(45, fb_ecc),
         "NW": stimuli.utils.pol_to_cart(135, fb_ecc),
@@ -133,10 +156,10 @@ def get_conf(subj_id):
     )
 
     conf.resp_map = {
-        "9": "NE",
-        "7": "NW",
-        "1": "SW",
-        "3": "SE"
+        "num_9": "NE",
+        "num_7": "NW",
+        "num_1": "SW",
+        "num_3": "SE"
     }
 
     conf.min_time_between_runs_s = 30.0

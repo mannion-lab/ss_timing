@@ -94,7 +94,7 @@ def _run(
 
     if win is None:
         win = psychopy.visual.Window(
-            size=conf.monitor_res,
+            size=conf.monitor_res_pix,
             monitor=conf.monitor_name,
             fullscr=True,
             allowGUI=False,
@@ -128,6 +128,7 @@ def _run(
                 "begin.png"
             )
 
+            win.flip()
             stim["image"].draw()
             stim["fixation"].draw()
             win.flip()
@@ -269,7 +270,7 @@ def _run_trial(conf, win, stim, trial_data):
         if key == "q":
             raise ValueError("User aborted")
         else:
-            (resp, resp_pos) = conf.resp_map[key]
+            resp_pos = conf.resp_map[key]
             trial_data["raw_resp"] = key
             trial_data["response_pos"] = resp_pos
             trial_data["response_time"] = key_rt
@@ -278,16 +279,18 @@ def _run_trial(conf, win, stim, trial_data):
         trial_data["response_pos"] == trial_data["target_pos"]
     )
 
-    if trial_data["correct"] == 1:
-        fb = stim["ticks"]
-    else:
-        fb = stim["checks"]
+    stim["fb"][trial_data["correct"]].pos = conf.fb_positions[
+        trial_data["target_pos"]
+    ]
 
     _ = [ring.draw() for ring in stim["rings"]]
-    fb[trial_data["target_pos"]].draw()
+    stim["fb"][trial_data["correct"]].draw()
     stim["fixation"].draw()
     win.flip()
 
     psychopy.core.wait(conf.fb_s)
+
+    stim["fixation"].draw()
+    win.flip()
 
     return trial_data

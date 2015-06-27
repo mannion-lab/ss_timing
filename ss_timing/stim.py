@@ -1,20 +1,36 @@
+import os
+
 import psychopy.visual
+import psychopy.filters
 
 import stimuli.psychopy_ext
+import stimuli.utils
 
 
 def get_stim(conf, win):
 
     stim = {}
 
+    grating_size = stimuli.utils.nearest_power_of_two(conf.surr_diam_pix)
+
+    grating = psychopy.filters.makeGrating(
+        res=grating_size,
+        cycles=grating_size / conf.grating_cpp
+    )
+
+    surr_mask = psychopy.filters.makeMask(
+        matrixSize=grating_size,
+        shape="raisedCosine",
+        radius=[conf.surr_diam_pix / grating_size] * 2
+    )
+
     stim["surr"] = psychopy.visual.GratingStim(
         win=win,
-        tex="sin",
-        mask="raisedCos",
-        units="deg",
+        tex=grating,
+        mask=surr_mask,
+        units="pix",
+        size=[grating_size] * 2,
         pos=[0.0, 0.0],
-        size=[conf.surr_diam_dva] * 2,
-        sf=conf.surr_cpd,
         ori=45.0,  # will be updated
         phase=0.0,  # will be updated
         contrast=conf.surr_contrast,
@@ -29,7 +45,7 @@ def get_stim(conf, win):
             units="deg",
             pos=conf.target_positions[target_pos],
             size=[conf.target_diam_dva] * 2,
-            sf=conf.target_cpd,
+            sf=conf.grating_cpd,
             ori=stimuli.utils.math_to_nav_polar(conf.target_ori),
             phase=0.0,  # will be updated
             contrast=0.0,  # will be updated
@@ -49,28 +65,19 @@ def get_stim(conf, win):
         for target_pos in conf.target_positions.keys()
     ]
 
-    stim["ticks"] = {
-        fb_pos: psychopy.visual.TextStim(
+    stim["fb"] = {
+        corr: psychopy.visual.ImageStim(
             win=win,
-            font="wingdings",
-            text=u"\uF0FC",
-            pos=conf.fb_positions[fb_pos],
-            height=1.0,
-            autoLog=False
+            size=conf.target_diam_dva * 0.25,
+            autoLog=False,
+            image=os.path.join(
+                conf.image_path,
+                corr_file + ".png"
+            )
         )
-        for fb_pos in conf.fb_positions.keys()
-    }
-
-    stim["checks"] = {
-        fb_pos: psychopy.visual.TextStim(
-            win=win,
-            font="wingdings",
-            text=u"\uF0FB",
-            pos=conf.fb_positions[fb_pos],
-            height=1.0,
-            autoLog=False
+        for (corr, corr_file) in zip(
+            (0, 1), ("cross", "tick")
         )
-        for fb_pos in conf.fb_positions.keys()
     }
 
     stim["fixation"] = stimuli.psychopy_ext.Fixation(
@@ -87,7 +94,7 @@ def get_stim(conf, win):
     stim["image"] = psychopy.visual.ImageStim(
         win=win,
         units="pix",
-        size=conf.monitor_res
+        size=conf.monitor_res_pix
     )
 
     return stim
