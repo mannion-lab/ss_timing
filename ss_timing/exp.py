@@ -17,7 +17,6 @@ import ss_timing.stim
 
 def run(
     subj_id,
-    theta_type,
     run_num,
     wait_to_start=True,
     wait_at_end=True,
