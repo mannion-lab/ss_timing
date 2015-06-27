@@ -205,10 +205,6 @@ def _run(
 
 def _run_trial(conf, win, stim, trial_data):
 
-    trial_data["surr_onset"] = "sim"
-    trial_data["surr_ori"] = 90.0
-    trial_data["target_contrast"] = 0.25
-
     timer = psychopy.core.Clock()
     conf.exp_input.set_clock(timer)
 

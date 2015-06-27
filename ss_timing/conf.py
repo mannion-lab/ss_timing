@@ -99,22 +99,10 @@ def get_conf(subj_id):
         "target": target_train
     }
 
-
     # stimulus parameters
 
-    conf.surr_diam_dva = 20.0
-    conf.surr_diam_pix = np.round(
-        psychopy.misc.deg2pix(conf.surr_diam_dva, conf.monitor)
-    )
-
-    conf.grating_cpd = 1.0
-    # grating cycles per pixel
-    conf.grating_cpp = (1.0 / conf.grating_cpd) / conf.monitor_dpp
-
+    conf.target_cpd = 1.0
     conf.target_diam_dva = 3.0
-    conf.target_diam_pix = np.round(
-        psychopy.misc.deg2pix(conf.target_diam_dva, conf.monitor)
-    )
     conf.target_ecc_dva = 5.0
     conf.target_positions = {
         "NE": stimuli.utils.pol_to_cart(45, conf.target_ecc_dva),
