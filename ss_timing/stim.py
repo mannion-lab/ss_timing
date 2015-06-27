@@ -1,29 +1,13 @@
 import os
 
 import psychopy.visual
-import psychopy.filters
 
 import stimuli.psychopy_ext
-import stimuli.utils
 
 
 def get_stim(conf, win):
 
     stim = {}
-
-    grating_size = stimuli.utils.nearest_power_of_two(conf.surr_diam_pix)
-
-    grating = psychopy.filters.makeGrating(
-        res=grating_size,
-        cycles=grating_size / conf.grating_cpp
-    )
-
-    surr_mask = psychopy.filters.makeMask(
-        matrixSize=grating_size,
-        shape="raisedCosine",
-        radius=[conf.surr_diam_pix / grating_size] * 2
-    )
-
 
     stim["surr"] = psychopy.visual.GratingStim(
         win=win,
@@ -32,7 +16,7 @@ def get_stim(conf, win):
         units="deg",
         pos=[0.0, 0.0],
         size=[conf.surr_diam_dva] * 2,
-        sf=[conf.surr_cpd, 1],
+        sf=conf.surr_cpd,
         ori=0.0,  # will be updated
         phase=0.0,  # will be updated
         contrast=conf.surr_contrast,
@@ -47,7 +31,7 @@ def get_stim(conf, win):
             units="deg",
             pos=conf.target_positions[target_pos],
             size=[conf.target_diam_dva] * 2,
-            sf=[conf.grating_cpd, 1],
+            sf=conf.target_cpd,
             ori=stimuli.utils.math_to_nav_polar(conf.target_ori),
             phase=0.0,  # will be updated
             contrast=0.0,  # will be updated
