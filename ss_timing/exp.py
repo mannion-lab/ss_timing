@@ -3,9 +3,11 @@ import os
 
 import numpy as np
 
+import pyglet
 import psychopy.visual
 import psychopy.event
 import psychopy.core
+import psychopy.hardware.crs
 
 import stimuli.psychopy_ext
 import stimuli.psi
@@ -99,8 +101,7 @@ def _run(
             autoLog=False,
             units="deg",
             gamma=1.0,
-            useFBO=True,
-            color=[1, 1, -1]
+            useFBO=True
         )
 
         bits = psychopy.hardware.crs.BitsSharp(
@@ -111,7 +112,7 @@ def _run(
         )
         bits.temporalDithering = False
 
-        pyglet.gl.glColorMask([1, 1, 0, 1])
+        pyglet.gl.glColorMask(1, 1, 0, 1)
 
     try:
 
@@ -197,8 +198,6 @@ def _run(
             bits.com.close()
             win.close()
 
-        raise
-
     return run_data
 
 
@@ -212,7 +211,7 @@ def _run_trial(conf, win, stim, trial_data):
     stim["surr"].phase = grating_phase
     stim["surr"].ori = stimuli.utils.math_to_nav_polar(trial_data["surr_ori"])
 
-    for target in stim["targets"].items():
+    for target in stim["targets"].values():
         target.phase = grating_phase
         target.contrast = 0.0
 
@@ -234,22 +233,22 @@ def _run_trial(conf, win, stim, trial_data):
         # is
         stim["surr"].contrast = (
             conf.surr_contrast *
-            conf.vis_train["surr"][trial_data["surr_offset"]]
+            conf.vis_train["surr"][trial_data["surr_onset"]][i_frame]
         )
 
         stim["targets"][trial_data["target_pos"]].contrast = (
             trial_data["target_contrast"] *
-            conf.vis_train["target"]
+            conf.vis_train["target"][i_frame]
         )
 
         # update the fixation colour if the target is being shown
-        if conf.vis_train["target"] == 1:
+        if conf.vis_train["target"][i_frame] == 1:
             stim["fixation"].set_fix_col([1] * 3)
         else:
             stim["fixation"].set_fix_col([-1] * 3)
 
         stim["surr"].draw()
-        _ = [target.draw() for target in stim["targets"]]
+        _ = [target.draw() for target in stim["targets"].values()]
         stim["fixation"].draw()
 
         win.flip()
@@ -258,7 +257,7 @@ def _run_trial(conf, win, stim, trial_data):
     stim["fixation"].set_fix_col([-0.5] * 3)
     stim["fixation"].draw()
     _ = [ring.draw() for ring in stim["rings"]]
-    win.flip()
+    #win.flip()
 
     conf.exp_input.clear()
     keys = conf.exp_input.wait(

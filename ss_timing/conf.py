@@ -28,7 +28,7 @@ def get_conf(subj_id):
 
     image_dir = {
         "djm_unsw": "/home/damien/venv_study/ss_timing/code/ss_timing/images",
-        "djm_1018_12": "/sci/study/gp_unc/code/ss_timing/images"
+        "djm_1018_12": "/sci/study/ss_timing/code/ss_timing/images"
     }
     conf.image_path = image_dir[socket.gethostname()]
 
