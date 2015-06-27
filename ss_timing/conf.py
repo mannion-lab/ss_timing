@@ -59,6 +59,7 @@ def get_conf(subj_id):
     conf.monitor_name = "1018_12_dpp"
     conf.monitor_res = (1920, 1080)
     conf.monitor_mode = "mono++"
+    conf.monitor_port = "/dev/dpp"
 
     # 12 * (1/120) = 100ms
     conf.pres_frames = 12
@@ -113,8 +114,8 @@ def get_conf(subj_id):
         "SE": stimuli.utils.pol_to_cart(315, fb_ecc)
     }
 
-    conf.pre_s = 0.25
-    conf.on_s = 0.25
+    conf.pre_s = 0.5
+    conf.fb_s = 0.5
     conf.min_iti = 1.5
 
     conf.psych_func = functools.partial(
@@ -132,10 +133,10 @@ def get_conf(subj_id):
     )
 
     conf.resp_map = {
-        9: "NE",
-        7: "NW",
-        1: "SW",
-        3: "SE"
+        "9": "NE",
+        "7": "NW",
+        "1": "SW",
+        "3": "SE"
     }
 
     conf.min_time_between_runs_s = 30.0
