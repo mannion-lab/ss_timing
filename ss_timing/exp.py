@@ -133,6 +133,7 @@ def _run(
             stim["fixation"].draw()
             win.flip()
 
+            conf.exp_input.clear()
             conf.exp_input.wait()
 
         stim["fixation"].draw()
@@ -204,6 +205,10 @@ def _run(
 
 def _run_trial(conf, win, stim, trial_data):
 
+    trial_data["surr_onset"] = "sim"
+    trial_data["surr_ori"] = 90.0
+    trial_data["target_contrast"] = 0.25
+
     timer = psychopy.core.Clock()
     conf.exp_input.set_clock(timer)
 
@@ -213,9 +218,10 @@ def _run_trial(conf, win, stim, trial_data):
     stim["surr"].ori = stimuli.utils.math_to_nav_polar(trial_data["surr_ori"])
 
     for target in stim["targets"].values():
-        target.phase = grating_phase
+        # not entirely sure why, but 0.5 needs to be added to the target phase
+        # so that it stays aligned with the surround
+        target.phase = grating_phase + 0.5
         target.contrast = 0.0
-
 
     # ready to start the trial
 
@@ -225,7 +231,6 @@ def _run_trial(conf, win, stim, trial_data):
     while timer.getTime() < conf.pre_s:
         stim["fixation"].draw()
         win.flip()
-
 
     # stim
     for i_frame in xrange(conf.vis_train_frames):
