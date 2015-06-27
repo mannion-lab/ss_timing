@@ -127,7 +127,7 @@ def get_conf(subj_id):
 
     conf.pre_s = 0.5
     conf.fb_s = 0.5
-    conf.min_iti = 1.5
+    conf.min_iti = 2.0
 
     conf.psych_func = functools.partial(
         stimuli.psi.weibull,
@@ -135,12 +135,12 @@ def get_conf(subj_id):
         guess_rate=0.25  # 4AFC
     )
 
-    conf.x_levels = np.linspace(0.001, 0.5, 500)
-    conf.alpha_levels = np.linspace(0.001, 0.5, 500)
+    conf.x_levels = np.linspace(0.001, 0.75, 250)
+    conf.alpha_levels = np.linspace(0.001, 0.75, 250)
     conf.beta_levels = np.logspace(
         np.log10(0.5),
         np.log10(20.0),
-        100
+        50
     )
 
     conf.resp_map = {
@@ -150,6 +150,6 @@ def get_conf(subj_id):
         "num_3": "SE"
     }
 
-    conf.min_time_between_runs_s = 30.0
+    conf.min_time_between_runs = 30.0
 
     return conf

@@ -4,6 +4,8 @@ import os
 import numpy as np
 
 import pyglet
+import psychopy.logging
+psychopy.logging.console.setLevel(psychopy.logging.CRITICAL)
 import psychopy.visual
 import psychopy.event
 import psychopy.core
@@ -101,7 +103,8 @@ def _run(
             autoLog=False,
             units="deg",
             gamma=1.0,
-            useFBO=True
+            useFBO=True,
+            waitBlanking=False  # HACK
         )
 
         bits = psychopy.hardware.crs.BitsSharp(
@@ -113,6 +116,13 @@ def _run(
         bits.temporalDithering = False
 
         pyglet.gl.glColorMask(1, 1, 0, 1)
+
+        # check the refresh
+        ms_avg = win.getMsPerFrame(nFrames=120)[0]
+        assert (
+            np.round(ms_avg, 2) ==
+            np.round(1.0 / 120 * 1000, 2)
+        )
 
     try:
 
@@ -168,6 +178,8 @@ def _run(
 
             while trial_timer.getTime() < conf.min_iti:
                 pass
+
+            print trial_timer.getTime()
 
         if wait_at_end:
 
@@ -229,6 +241,8 @@ def _run_trial(conf, win, stim, trial_data):
         win.flip()
 
     # stim
+    win.recordFrameIntervals = True
+    win.nDroppedFrames = 0
     for i_frame in xrange(conf.vis_train_frames):
 
         # set the contrasts of the surround and target based on which frame it
@@ -255,11 +269,16 @@ def _run_trial(conf, win, stim, trial_data):
 
         win.flip()
 
+    if win.nDroppedFrames > 0:
+        print "Frame dropped"
+
+    win.recordFrameIntervals = False
+
     # response
     stim["fixation"].set_fix_col([-0.5] * 3)
     stim["fixation"].draw()
     _ = [ring.draw() for ring in stim["rings"]]
-    #win.flip()
+    win.flip()
 
     conf.exp_input.clear()
     keys = conf.exp_input.wait(
