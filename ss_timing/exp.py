@@ -215,12 +215,15 @@ def _run(
     return run_data
 
 
-def _run_trial(conf, win, stim, trial_data):
+def _run_trial(conf, win, stim, trial_data, lm3=None):
 
     timer = psychopy.core.Clock()
     conf.exp_input.set_clock(timer)
 
-    grating_phase = np.random.rand()
+    if lm3 is None:
+        grating_phase = np.random.rand()
+    else:
+        grating_phase = 0.5
 
     stim["surr"].phase = grating_phase
     stim["surr"].ori = stimuli.utils.math_to_nav_polar(trial_data["surr_ori"])
@@ -243,6 +246,10 @@ def _run_trial(conf, win, stim, trial_data):
     # stim
     win.recordFrameIntervals = True
     win.nDroppedFrames = 0
+
+    if lm3 is not None:
+        lm3.sample()
+
     for i_frame in xrange(conf.vis_train_frames):
 
         # set the contrasts of the surround and target based on which frame it
@@ -308,9 +315,15 @@ def _run_trial(conf, win, stim, trial_data):
     stim["fixation"].draw()
     win.flip()
 
+    if lm3 is not None:
+        lum_data = lm3.retrieve()
+
     psychopy.core.wait(conf.fb_s)
 
     stim["fixation"].draw()
     win.flip()
 
-    return trial_data
+    if lm3 is None:
+        return trial_data
+    else:
+        return (trial_data, lum_data)
