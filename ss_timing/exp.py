@@ -179,8 +179,6 @@ def _run(
             while trial_timer.getTime() < conf.min_iti:
                 pass
 
-            print trial_timer.getTime()
-
         if wait_at_end:
 
             stim["image"].image = os.path.join(

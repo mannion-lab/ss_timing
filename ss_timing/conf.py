@@ -144,10 +144,10 @@ def get_conf(subj_id):
     )
 
     conf.resp_map = {
-        "num_9": "NE",
+        "num_8": "NE",
         "num_7": "NW",
-        "num_1": "SW",
-        "num_3": "SE"
+        "num_4": "SW",
+        "num_5": "SE"
     }
 
     conf.min_time_between_runs = 30.0
