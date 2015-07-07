@@ -2,6 +2,7 @@ import datetime
 import os
 
 import numpy as np
+import scipy.misc
 
 import pyglet
 import psychopy.logging
@@ -24,7 +25,8 @@ def run(
     run_num,
     wait_to_start=True,
     wait_at_end=True,
-    show_finish=False
+    show_finish=False,
+    screenshots=False
 ):
 
     conf = ss_timing.conf.get_conf(subj_id=subj_id)
@@ -53,7 +55,8 @@ def run(
         run_data,
         wait_to_start=wait_to_start,
         wait_at_end=wait_at_end,
-        show_finish=show_finish
+        show_finish=show_finish,
+        screenshots=screenshots
     )
 
     # check that all the trials have indeed been completed
@@ -76,7 +79,8 @@ def _run(
     close_win=True,
     wait_to_start=True,
     wait_at_end=True,
-    show_finish=False
+    show_finish=False,
+    screenshots=False
 ):
 
     trial_timer = psychopy.core.Clock()
@@ -119,10 +123,20 @@ def _run(
 
         # check the refresh
         ms_avg = win.getMsPerFrame(nFrames=120)[0]
-        assert (
-            np.round(ms_avg, 2) ==
-            np.round(1.0 / 120 * 1000, 2)
-        )
+        try:
+
+            assert (
+                np.round(ms_avg, 2) ==
+                np.round(1.0 / 120 * 1000, 2)
+            )
+
+        except AssertionError:
+
+            bits.mode = "auto++"
+            bits.com.close()
+            win.close()
+
+            raise
 
     try:
 
@@ -163,7 +177,14 @@ def _run(
 
             trial_timer.reset()
 
-            trial_data = _run_trial(conf, win, stim, trial_data)
+            trial_data = _run_trial(
+                conf,
+                win,
+                bits,
+                stim,
+                trial_data,
+                screenshots
+            )
 
             # update
             psis[i_stair].update(trial_data["correct"])
@@ -213,15 +234,19 @@ def _run(
     return run_data
 
 
-def _run_trial(conf, win, stim, trial_data, lm3=None):
+def _run_trial(
+    conf,
+    win,
+    bits,
+    stim,
+    trial_data,
+    screenshots=False
+):
 
     timer = psychopy.core.Clock()
     conf.exp_input.set_clock(timer)
 
-    if lm3 is None:
-        grating_phase = np.random.rand()
-    else:
-        grating_phase = 0.5
+    grating_phase = np.random.rand()
 
     stim["surr"].phase = grating_phase
     stim["surr"].ori = stimuli.utils.math_to_nav_polar(trial_data["surr_ori"])
@@ -244,9 +269,6 @@ def _run_trial(conf, win, stim, trial_data, lm3=None):
     # stim
     win.recordFrameIntervals = True
     win.nDroppedFrames = 0
-
-    if lm3 is not None:
-        lm3.sample()
 
     for i_frame in xrange(conf.vis_train_frames):
 
@@ -273,6 +295,27 @@ def _run_trial(conf, win, stim, trial_data, lm3=None):
         stim["fixation"].draw()
 
         win.flip()
+
+    if screenshots:
+
+        # 1920 x 1080 x 3
+        cap = np.empty(list(conf.monitor_res_pix) + [3])
+        cap.fill(np.NAN)
+
+        bits.mode = "status"
+
+        for i_y in xrange(cap.shape[1]):
+            cap[:, i_y, :] = bits.getVideoLine(
+                i_y + 1,
+                conf.monitor_res_pix[0],
+                timeout=60.0,
+                nAttempts=1
+            )
+
+        np.save("test.npy", cap)
+        scipy.misc.imsave("cap.png", cap.astype("uint8"))
+
+        bits.mode = conf.monitor_mode
 
     if win.nDroppedFrames > 0:
         print "Frame dropped"
@@ -313,15 +356,26 @@ def _run_trial(conf, win, stim, trial_data, lm3=None):
     stim["fixation"].draw()
     win.flip()
 
-    if lm3 is not None:
-        lum_data = lm3.retrieve()
+    if screenshots:
+
+        cap = np.empty(list(conf.monitor_res_pix) + [3])
+        cap.fill(np.NAN)
+
+        for i_y in xrange(cap.shape[1]):
+            cap[:, i_y, :] = bits.getVideoLine(
+                i_y,
+                conf.monitor_res_pix[0],
+                timeout=60.0
+            )
+
+        scipy.misc.imsave(
+            "cap_" + str(trial_data["correct"]) + ".png",
+            cap
+        )
 
     psychopy.core.wait(conf.fb_s)
 
     stim["fixation"].draw()
     win.flip()
 
-    if lm3 is None:
-        return trial_data
-    else:
-        return (trial_data, lum_data)
+    return trial_data
