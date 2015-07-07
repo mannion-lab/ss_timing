@@ -167,6 +167,9 @@ def _run(
 
         for trial_data in run_data:
 
+            if screenshots:
+                screenshot_base = "cap_t_{n:d}".format(n=trial_data["run_trial"])
+
             assert trial_data["completed"] == 0
 
             i_stair = trial_data["stair_num"] - 1
@@ -183,7 +186,7 @@ def _run(
                 bits,
                 stim,
                 trial_data,
-                screenshots
+                screenshot_base
             )
 
             # update
@@ -240,8 +243,11 @@ def _run_trial(
     bits,
     stim,
     trial_data,
-    screenshots=False
+    screenshot_base=None
 ):
+
+    if screenshot_base is not None:
+        cap_count = 1
 
     timer = psychopy.core.Clock()
     conf.exp_input.set_clock(timer)
@@ -296,26 +302,16 @@ def _run_trial(
 
         win.flip()
 
-    if screenshots:
+    if screenshot_base is not None:
 
-        # 1920 x 1080 x 3
-        cap = np.empty(list(conf.monitor_res_pix) + [3])
-        cap.fill(np.NAN)
+        img = win.getMovieFrame()
 
-        bits.mode = "status"
+        scipy.misc.imsave(
+            screenshot_base + "_{n:d}.png".format(n=cap_count),
+            np.array(img)[..., -1].astype("uint8")
+        )
 
-        for i_y in xrange(cap.shape[1]):
-            cap[:, i_y, :] = bits.getVideoLine(
-                i_y + 1,
-                conf.monitor_res_pix[0],
-                timeout=60.0,
-                nAttempts=1
-            )
-
-        np.save("test.npy", cap)
-        scipy.misc.imsave("cap.png", cap.astype("uint8"))
-
-        bits.mode = conf.monitor_mode
+        cap_count += 1
 
     if win.nDroppedFrames > 0:
         print "Frame dropped"
@@ -356,22 +352,16 @@ def _run_trial(
     stim["fixation"].draw()
     win.flip()
 
-    if screenshots:
+    if screenshot_base is not None:
 
-        cap = np.empty(list(conf.monitor_res_pix) + [3])
-        cap.fill(np.NAN)
-
-        for i_y in xrange(cap.shape[1]):
-            cap[:, i_y, :] = bits.getVideoLine(
-                i_y,
-                conf.monitor_res_pix[0],
-                timeout=60.0
-            )
+        img = win.getMovieFrame()
 
         scipy.misc.imsave(
-            "cap_" + str(trial_data["correct"]) + ".png",
-            cap
+            screenshot_base + "_{n:d}.png".format(n=cap_count),
+            np.array(img)[..., -1].astype("uint8")
         )
+
+        cap_count += 1
 
     psychopy.core.wait(conf.fb_s)
 
