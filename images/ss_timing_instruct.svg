@@ -30,14 +30,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="853.48089"
+     inkscape:cx="1044.9095"
      inkscape:cy="595.36286"
      inkscape:document-units="px"
-     inkscape:current-layer="g4080"
+     inkscape:current-layer="g3999"
      showgrid="false"
      units="px"
-     inkscape:window-width="2554"
-     inkscape:window-height="1417"
+     inkscape:window-width="1918"
+     inkscape:window-height="1059"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -76,7 +76,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -526,10 +526,10 @@
            y="412.85715"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
          id="flowPara5061">We will now do a practice run with trials like what you have just been doing.</flowPara><flowPara
-         id="flowPara3995"></flowPara><flowPara
+         id="flowPara3995" /><flowPara
          id="flowPara3997">Please call your experimenter to proceed.</flowPara></flowRoot>  </g>
   <g
-     style="display:none"
+     style="display:inline"
      inkscape:label="10"
      id="g3999"
      inkscape:groupmode="layer">
@@ -557,7 +557,7 @@
            height="304.28571"
            width="660"
            id="rect4013" /></flowRegion><flowPara
-         id="flowPara4019">In the experiment, the targets will be surrounded by a pattern that looks either like this:</flowPara></flowRoot>  </g>
+         id="flowPara4019">In the experiment, the target locations will be surrounded by a pattern that looks either like this:</flowPara></flowRoot>  </g>
   <g
      inkscape:groupmode="layer"
      id="g4026"
@@ -649,7 +649,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
          id="flowPara4078">We will now do a few example trials where the surrounding pattern will be present.</flowPara></flowRoot>  </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="14"
      id="g4080"
      inkscape:groupmode="layer">

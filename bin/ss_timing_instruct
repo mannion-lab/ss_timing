@@ -30,7 +30,7 @@ def main():
     if args.phase == "a":
         ss_timing.instruct.run()
     else:
-        pass
+        ss_timing.instruct.run_b()
 
 
 if __name__ == "__main__":
