@@ -2,6 +2,10 @@ import os
 
 import numpy as np
 
+import pyglet
+import psychopy.logging
+psychopy.logging.console.setLevel(psychopy.logging.CRITICAL)
+
 import psychopy.visual
 
 import stimuli.psychopy_ext
@@ -54,6 +58,8 @@ def run(bits_mode=True):
         pyglet.gl.glColorMask(1, 1, 0, 1)
 
     try:
+
+        win.flip()
 
         stim = ss_timing.stim.get_stim(conf, win)
 
