@@ -64,7 +64,7 @@ def main():
             cmd.append("--no_wait_at_end")
 
         try:
-            runcmd.run_cmd(" ".join(cmd), log_stdout=False, log_cmd=False)
+            runcmd.run_cmd(" ".join(cmd), log_stdout=True, log_cmd=True)
         except Exception as e:
             raise Exception(e)
 
