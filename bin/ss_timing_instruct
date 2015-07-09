@@ -1,0 +1,37 @@
+#! /usr/bin/env python2
+
+"Handles command-line input for the ss timing experiment"
+
+import argparse
+
+import ss_timing.instruct
+
+
+def main():
+    "Parse the command-line input and offload"
+
+    description = "Execute a session for the ss timing experiment"
+
+    fmt = argparse.ArgumentDefaultsHelpFormatter
+
+    parser = argparse.ArgumentParser(
+        description=description,
+        formatter_class=fmt
+    )
+
+    parser.add_argument(
+        "phase",
+        help="Practice phase",
+        choices=["a", "b"]
+    )
+
+    args = parser.parse_args()
+
+    if args.phase == "a":
+        ss_timing.instruct.run()
+    else:
+        pass
+
+
+if __name__ == "__main__":
+    main()
