@@ -46,6 +46,7 @@ def get_stim(conf, win):
             radius=conf.target_diam_dva / 2.0,
             edges=64,
             pos=conf.target_positions[target_pos],
+            lineColor=[-0.1] * 3,
             autoLog=False
         )
         for target_pos in conf.target_positions.keys()
