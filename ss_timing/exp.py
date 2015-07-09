@@ -169,6 +169,8 @@ def _run(
 
             if screenshots:
                 screenshot_base = "cap_t_{n:d}".format(n=trial_data["run_trial"])
+            else:
+                screenshot_base = None
 
             assert trial_data["completed"] == 0
 

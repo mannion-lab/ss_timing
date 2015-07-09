@@ -67,11 +67,14 @@ def gen_data_table(conf):
     return data
 
 
-def load_data(conf):
+def load_data(conf, path=None):
 
     (_, dt, _) = get_data_dtype()
 
-    (path, path_exists) = get_data_path(conf)
+    if path is None:
+        (path, path_exists) = get_data_path(conf)
+    else:
+        path_exists = True
 
     if not path_exists:
         raise OSError("Path " + path + " does not exist")
@@ -85,11 +88,12 @@ def load_data(conf):
     return data
 
 
-def save_data(conf, data):
+def save_data(conf, data, path=None):
 
     (_, dt, formats) = get_data_dtype()
 
-    (path, _) = get_data_path(conf)
+    if path is None:
+        (path, _) = get_data_path(conf)
 
     header = conf.study_id + " - " + conf.subj_id + "\n"
     header += "\t".join(dt.names)
@@ -146,7 +150,7 @@ def get_data_dtype():
 
     dt_info["surr_ori"] = {
         "dt": np.float,
-        "fmt": "%f",
+        "fmt": "%.12g",
         "description": "Surround orientation, in degrees"
     }
 
@@ -158,19 +162,19 @@ def get_data_dtype():
 
     dt_info["target_ori"] = {
         "dt": np.float,
-        "fmt": "%f",
+        "fmt": "%.12g",
         "description": "Target orientation, in degrees"
     }
 
     dt_info["surr_contrast"] = {
         "dt": np.float,
-        "fmt": "%f",
+        "fmt": "%.12g",
         "description": "Surround contrast"
     }
 
     dt_info["target_contrast"] = {
         "dt": np.float,
-        "fmt": "%f",
+        "fmt": "%.12g",
         "description": "Target contrast"
     }
 
@@ -200,19 +204,19 @@ def get_data_dtype():
 
     dt_info["response_time"] = {
         "dt": np.float,
-        "fmt": "%f",
+        "fmt": "%.12g",
         "description": "Response time, in seconds"
     }
 
     dt_info["alpha_hat"] = {
         "dt": np.float,
-        "fmt": "%f",
+        "fmt": "%.12g",
         "description": "Psi alpha estimate after trial"
     }
 
     dt_info["beta_hat"] = {
         "dt": np.float,
-        "fmt": "%f",
+        "fmt": "%.12g",
         "description": "Psi beta estimate after trial"
     }
 

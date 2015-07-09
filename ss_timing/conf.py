@@ -135,8 +135,16 @@ def get_conf(subj_id):
         guess_rate=0.25  # 4AFC
     )
 
-    conf.x_levels = np.linspace(0.001, 0.75, 250)
-    conf.alpha_levels = np.linspace(0.001, 0.75, 250)
+    conf.x_levels = np.logspace(
+        np.log10(0.001),
+        np.log10(1.0),
+        350
+    )
+    conf.alpha_levels = np.logspace(
+        np.log10(0.001),
+        np.log10(1.0),
+        350
+    )
     conf.beta_levels = np.logspace(
         np.log10(0.5),
         np.log10(20.0),
