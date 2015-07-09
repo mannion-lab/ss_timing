@@ -1,0 +1,58 @@
+#! /usr/bin/env python2
+
+"Handles command-line input for the ss timing experiment"
+
+import argparse
+
+import ss_timing.exp
+
+
+def main():
+    "Parse the command-line input and offload"
+
+    description = "Execute a run for the ss timing experiment"
+
+    fmt = argparse.ArgumentDefaultsHelpFormatter
+
+    parser = argparse.ArgumentParser(
+        description=description,
+        formatter_class=fmt
+    )
+
+    parser.add_argument(
+        "subj_id",
+        help="Subject ID"
+    )
+
+    parser.add_argument(
+        "run_num",
+        help="Run number",
+        type=int
+    )
+
+    parser.add_argument(
+        "--no_wait_at_end",
+        action="store_true",
+        default=False,
+        help="Show wait screen at end"
+    )
+
+    parser.add_argument(
+        "--show_finish",
+        action="store_true",
+        default=False,
+        help="Show finish screen at end"
+    )
+
+    args = parser.parse_args()
+
+    ss_timing.exp.run(
+        args.subj_id,
+        args.run_num,
+        wait_at_end=not args.no_wait_at_end,
+        show_finish=args.show_finish
+    )
+
+
+if __name__ == "__main__":
+    main()

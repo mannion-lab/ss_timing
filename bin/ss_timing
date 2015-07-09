@@ -1,0 +1,73 @@
+#! /usr/bin/env python2
+
+"Handles command-line input for the ss timing experiment"
+
+import argparse
+
+import psychopy.core
+
+import runcmd
+
+import ss_timing.exp
+import ss_timing.conf
+
+
+def main():
+    "Parse the command-line input and offload"
+
+    conf = ss_timing.conf.get_conf("")
+
+    description = "Execute a session for the gp unc experiment"
+
+    fmt = argparse.ArgumentDefaultsHelpFormatter
+
+    parser = argparse.ArgumentParser(
+        description=description,
+        formatter_class=fmt
+    )
+
+    parser.add_argument(
+        "subj_id",
+        help="Subject ID"
+    )
+
+    parser.add_argument(
+        "--start_run",
+        default=1,
+        help="Starting run number",
+        type=int
+    )
+
+    parser.add_argument(
+        "--end_run",
+        default=conf.n_runs,
+        help="Ending run number",
+        type=int
+    )
+
+    args = parser.parse_args()
+
+    run_range = range(args.start_run, args.end_run + 1)
+
+    timer = psychopy.core.Clock()
+
+    for run_num in run_range:
+
+        cmd = [
+            "ss_timing_run",
+            args.subj_id,
+            str(run_num)
+        ]
+
+        if run_num == conf.n_runs:
+            cmd.append("--show_finish")
+            cmd.append("--no_wait_at_end")
+
+        try:
+            runcmd.run_cmd(" ".join(cmd), log_stdout=False, log_cmd=False)
+        except Exception as e:
+            raise Exception(e)
+
+
+if __name__ == "__main__":
+    main()
