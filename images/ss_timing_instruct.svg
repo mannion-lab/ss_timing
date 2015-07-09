@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1920"
+   height="1080"
+   viewBox="0 0 1920.0001 1080"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="ss_timing_instruct.svg"
+   inkscape:export-filename="/home/damien/venv_study/ss_timing/code/ss_timing/images/05.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="1082.6322"
+     inkscape:cy="550.95775"
+     inkscape:document-units="px"
+     inkscape:current-layer="g5033"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="2554"
+     inkscape:window-height="1417"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="960.00005,881.42857"
+       orientation="1,0"
+       id="guide3358"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="58.571432,540"
+       orientation="0,1"
+       id="guide3360"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="1130.0001,572.25142"
+       orientation="1,0"
+       id="guide4486"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="830.00004,517.1981"
+       orientation="1,0"
+       id="guide4488"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="stim"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,27.637408)"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <image
+       y="-27.637463"
+       x="0"
+       id="image4818"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAAAAADNuJ6fAAA6+0lEQVR4nO3dTXojSa8mWMBcUQvt YW+ixr2Brllvs5+nQm6ogbmTisi/kEgJEnXOzYz8rhiUXOLglTkIIP9nAAAfbXRfAAB8RwIYABoI YABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIAB oIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAG AhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghg AGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGg gQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYC GAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAA aCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCB AAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIY ABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABo IIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEA BoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgA GghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgg gAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAG gAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAa 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 UHMNo15V47MXOSrmi/nOv7T71vUygA/jBAwADQQwADQQwADQQA0YPtCvRdZrCThXXXY9PirPadJR MY/CbVx29UZmVsW+pkxXRY66PvBrqTfP3t71yS8tv9p9oZ0TMAA0EMAA0EAAA0ADNWD4BOqyPjhe NOkexeGXq4XXhzOi6lgz/MsTMi6P/PqM82/+8l+gkxMwADQQwADQQAADQAM1YPgM/qksW3l5rH5p 3v11gnPG3zzy2+dU+YXPxQkYABoIYABoIIABoIEaMHxq/1gcfu0TgE/GCRgAGghgAGgggAGggQAG gAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAa CGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCA AaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaA BgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoI YABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIAB oIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAG AhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghg AGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGg gQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYC GAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAA aCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCB AAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIY ABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABo IIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEA BoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgA GghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgg gAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAG gAYCGAAaCGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAa CGAAaCCAAaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCA AaCBAAaABgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaA BgIYABoIYABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAYCGAAaCGAAaCCAAaCBAAaABgIYABoI YABoIIABoIEABoAGAhgAGghgAGgggAGggQAGgAb/Bzg7Wm1aOK6OAAAAAElFTkSuQmCC "
+       preserveAspectRatio="none"
+       height="1080.0001"
+       width="1920.0001" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.46271443;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path3355"
+       cx="960.00006"
+       cy="512.36261"
+       r="240.87169" />
+    <circle
+       r="32.219479"
+       cy="424.50546"
+       cx="872.14288"
+       id="circle4821"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.19565561;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.19565561;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4823"
+       cx="1050.4348"
+       cy="424.50546"
+       r="32.219479" />
+    <circle
+       r="32.219479"
+       cy="600.7771"
+       cx="1050.4348"
+       id="circle4825"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.19565561;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.19565561;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4827"
+       cx="868.60736"
+       cy="600.7771"
+       r="32.219479" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="any"
+     style="display:none">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4211"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(34.285713,385.71427)"><flowRegion
+         id="flowRegion4213"><rect
+           id="rect4215"
+           width="500.00006"
+           height="305.71436"
+           x="675.71429"
+           y="412.85715" /></flowRegion><flowPara
+         style="font-size:25.00000191px;text-align:center;text-anchor:middle"
+         id="flowPara4217">Press any key to continue</flowPara></flowRoot>  </g>
+  <g
+     style="display:none"
+     inkscape:label="begin"
+     id="g4680"
+     inkscape:groupmode="layer">
+    <flowRoot
+       transform="translate(34.285713,384.28569)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4682"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4684"><rect
+           y="412.85715"
+           x="675.71429"
+           height="305.71436"
+           width="500.00006"
+           id="rect4686" /></flowRegion><flowPara
+         id="flowPara4688"
+         style="font-size:25.00000191px;text-align:center;text-anchor:middle">Press any key to begin</flowPara></flowRoot>  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g4690"
+     inkscape:label="wait"
+     style="display:none">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4692"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(34.285713,108.57138)"><flowRegion
+         id="flowRegion4694"><rect
+           id="rect4696"
+           width="500.00006"
+           height="305.71436"
+           x="675.71429"
+           y="412.85715" /></flowRegion><flowPara
+         style="font-size:25.00000191px;text-align:center;text-anchor:middle"
+         id="flowPara4698">Mandatory rest break before the start of the next run</flowPara></flowRoot>  </g>
+  <g
+     style="display:none"
+     inkscape:label="finish"
+     id="g4700"
+     inkscape:groupmode="layer">
+    <flowRoot
+       transform="translate(34.285713,108.57138)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4702"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4704"><rect
+           y="412.85715"
+           x="675.71429"
+           height="305.71436"
+           width="500.00006"
+           id="rect4706" /></flowRegion><flowPara
+         id="flowPara4708"
+         style="font-size:25.00000191px;text-align:center;text-anchor:middle">The experiment is now complete. Thank you for your participation!</flowPara><flowPara
+         style="font-size:25.00000191px;text-align:center;text-anchor:middle"
+         id="flowPara4710" /><flowPara
+         style="font-size:25.00000191px;text-align:center;text-anchor:middle"
+         id="flowPara4712">Please call your experimenter.</flowPara></flowRoot>  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="01"
+     style="display:none">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3362"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(0,-6.1035164e-5)"><flowRegion
+         id="flowRegion3364"><rect
+           id="rect3366"
+           width="572.85712"
+           height="220"
+           x="694.28571"
+           y="448.57144"
+           style="font-size:30px" /></flowRegion><flowPara
+         id="flowPara3368" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3370"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-44.285717,-64.285783)"><flowRegion
+         id="flowRegion3372"><rect
+           id="rect3374"
+           width="660"
+           height="304.28571"
+           x="675.71429"
+           y="412.85715"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara4829">In this experiment, we are going to measure your thresholds for detecting a visual pattern that looks like this:</flowPara></flowRoot>  </g>
+  <g
+     style="display:none"
+     inkscape:label="02"
+     id="g4831"
+     inkscape:groupmode="layer">
+    <flowRoot
+       transform="translate(0,-6.1035164e-5)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4833"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4835"><rect
+           style="font-size:30px"
+           y="448.57144"
+           x="694.28571"
+           height="220"
+           width="572.85712"
+           id="rect4837" /></flowRegion><flowPara
+         id="flowPara4839" /></flowRoot>    <flowRoot
+       transform="translate(-44.285717,-112.85722)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4841"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4843"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           y="412.85715"
+           x="675.71429"
+           height="304.28571"
+           width="660"
+           id="rect4845" /></flowRegion><flowPara
+         id="flowPara4847">On each trial, we will briefly flash the pattern in one of the four positions below. You will then be asked to indicate which position you thought the pattern was presented in.</flowPara></flowRoot>  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g4849"
+     inkscape:label="03"
+     style="display:none">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4851"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(0,-6.1035164e-5)"><flowRegion
+         id="flowRegion4853"><rect
+           id="rect4855"
+           width="572.85712"
+           height="220"
+           x="694.28571"
+           y="448.57144"
+           style="font-size:30px" /></flowRegion><flowPara
+         id="flowPara4857" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4859"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-44.285717,-112.85722)"><flowRegion
+         id="flowRegion4861"><rect
+           id="rect4863"
+           width="660"
+           height="304.28571"
+           x="675.71429"
+           y="412.85715"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara4865">You indicate your choice by pressing numbers on the keypad as shown below:</flowPara></flowRoot>    <flowRoot
+       transform="translate(-134.28572,24.285653)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4867"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4869"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           y="412.85715"
+           x="675.71429"
+           height="304.28571"
+           width="660"
+           id="rect4871" /></flowRegion><flowPara
+         id="flowPara4873">7</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4875"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(44.285719,24.285653)"><flowRegion
+         id="flowRegion4877"><rect
+           id="rect4879"
+           width="660"
+           height="304.28571"
+           x="675.71429"
+           y="412.85715"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara4881">8</flowPara></flowRoot>    <flowRoot
+       transform="translate(44.285719,200.71425)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4883"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4885"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           y="412.85715"
+           x="675.71429"
+           height="304.28571"
+           width="660"
+           id="rect4887" /></flowRegion><flowPara
+         id="flowPara4889">5</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4891"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-137.85715,200.71425)"><flowRegion
+         id="flowRegion4893"><rect
+           id="rect4895"
+           width="660"
+           height="304.28571"
+           x="675.71429"
+           y="412.85715"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara4897">4</flowPara></flowRoot>  </g>
+  <g
+     style="display:none"
+     inkscape:label="04"
+     id="g4899"
+     inkscape:groupmode="layer">
+    <flowRoot
+       transform="translate(0,-6.1035164e-5)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4901"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4903"><rect
+           style="font-size:30px"
+           y="448.57144"
+           x="694.28571"
+           height="220"
+           width="572.85712"
+           id="rect4905" /></flowRegion><flowPara
+         id="flowPara4907" /></flowRoot>    <flowRoot
+       transform="translate(-44.285717,-91.129172)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4909"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4911"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           y="412.85715"
+           x="675.71429"
+           height="304.28571"
+           width="660"
+           id="rect4913" /></flowRegion><flowPara
+         id="flowPara4915">To vary the difficulty of this task, the pattern will be shown at different contrasts. Below shows the pattern at different contrasts, from low (left, hard) to high (right, easy):</flowPara></flowRoot>  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g4949"
+     inkscape:label="05"
+     style="display:none">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4951"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(0,-6.1035164e-5)"><flowRegion
+         id="flowRegion4953"><rect
+           id="rect4955"
+           width="572.85712"
+           height="220"
+           x="694.28571"
+           y="448.57144"
+           style="font-size:30px" /></flowRegion><flowPara
+         id="flowPara4957" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4959"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-44.285717,76.556171)"><flowRegion
+         id="flowRegion4961"><rect
+           id="rect4963"
+           width="660"
+           height="304.28571"
+           x="675.71429"
+           y="412.85715"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara4965">The difficulty will be automatically adjusted based on your previous responses, so you will always be getting some trials correct and some trials incorrect.</flowPara></flowRoot>  </g>
+  <g
+     style="display:none"
+     inkscape:label="06"
+     id="g4967"
+     inkscape:groupmode="layer">
+    <flowRoot
+       transform="translate(0,-6.1035164e-5)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4969"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4971"><rect
+           style="font-size:30px"
+           y="448.57144"
+           x="694.28571"
+           height="220"
+           width="572.85712"
+           id="rect4973" /></flowRegion><flowPara
+         id="flowPara4975" /></flowRoot>    <flowRoot
+       transform="translate(-44.285717,76.556171)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4977"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4979"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           y="412.85715"
+           x="675.71429"
+           height="304.28571"
+           width="660"
+           id="rect4981" /></flowRegion><flowPara
+         id="flowPara4983">After your response, a marker will appear in the location of the pattern. If you chose correctly, the marker will be a 'tick'. If you chose incorrectly, the marker will be a 'cross'.</flowPara></flowRoot>  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g4985"
+     inkscape:label="07"
+     style="display:none">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4987"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(0,-6.1035164e-5)"><flowRegion
+         id="flowRegion4989"><rect
+           id="rect4991"
+           width="572.85712"
+           height="220"
+           x="694.28571"
+           y="448.57144"
+           style="font-size:30px" /></flowRegion><flowPara
+         id="flowPara4993" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4995"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-44.285717,-112.85722)"><flowRegion
+         id="flowRegion4997"><rect
+           id="rect4999"
+           width="660"
+           height="304.28571"
+           x="675.71429"
+           y="412.85715"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5001">At all times during each trial, please keep your gaze focused on the small circle in the centre.</flowPara></flowRoot>  </g>
+  <g
+     style="display:none"
+     inkscape:label="08"
+     id="g5003"
+     inkscape:groupmode="layer">
+    <flowRoot
+       transform="translate(0,-6.1035164e-5)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot5005"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5007"><rect
+           style="font-size:30px"
+           y="448.57144"
+           x="694.28571"
+           height="220"
+           width="572.85712"
+           id="rect5009" /></flowRegion><flowPara
+         id="flowPara5011" /></flowRoot>    <flowRoot
+       transform="translate(-44.285717,0.27987851)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot5013"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5015"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           y="412.85715"
+           x="675.71429"
+           height="304.28571"
+           width="660"
+           id="rect5017" /></flowRegion><flowPara
+         id="flowPara5019">We will now do a few example trials.</flowPara><flowPara
+         id="flowPara5021" /><flowPara
+         id="flowPara5023">Remember to:</flowPara><flowPara
+         id="flowPara5025" /><flowPara
+         id="flowPara5027">* Keep your gaze on the central circle</flowPara><flowPara
+         id="flowPara5029">* Try and detect at which location the pattern was presented</flowPara><flowPara
+         id="flowPara5031">* Respond using the numbers on the keypad</flowPara></flowRoot>  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g5033"
+     inkscape:label="09"
+     style="display:inline">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5035"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:FreeSans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(0,-6.1035164e-5)"><flowRegion
+         id="flowRegion5037"><rect
+           id="rect5039"
+           width="572.85712"
+           height="220"
+           x="694.28571"
+           y="448.57144"
+           style="font-size:30px" /></flowRegion><flowPara
+         id="flowPara5041" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5043"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-44.285717,63.9195)"><flowRegion
+         id="flowRegion5045"><rect
+           id="rect5047"
+           width="660"
+           height="304.28571"
+           x="675.71429"
+           y="412.85715"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000191px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5061">We will now do a practice run with trials like what you have just been doing.</flowPara><flowPara
+         id="flowPara3995"></flowPara><flowPara
+         id="flowPara3997">Please call your experimenter to proceed.</flowPara></flowRoot>  </g>
+</svg>

@@ -131,7 +131,7 @@ def get_conf(subj_id):
 
     conf.psych_func = functools.partial(
         stimuli.psi.weibull,
-        lapse_rate=0.02,
+        lapse_rate=0.05,
         guess_rate=0.25  # 4AFC
     )
 

@@ -183,7 +183,6 @@ def _run(
             trial_data = _run_trial(
                 conf,
                 win,
-                bits,
                 stim,
                 trial_data,
                 screenshot_base
@@ -227,6 +226,10 @@ def _run(
 
             conf.exp_input.wait()
 
+    except:
+
+        raise
+
     finally:
 
         if close_win:
@@ -240,7 +243,6 @@ def _run(
 def _run_trial(
     conf,
     win,
-    bits,
     stim,
     trial_data,
     screenshot_base=None
@@ -281,7 +283,7 @@ def _run_trial(
         # set the contrasts of the surround and target based on which frame it
         # is
         stim["surr"].contrast = (
-            conf.surr_contrast *
+            trial_data["surr_contrast"] *
             conf.vis_train["surr"][trial_data["surr_onset"]][i_frame]
         )
 
