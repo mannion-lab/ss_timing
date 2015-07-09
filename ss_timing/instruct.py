@@ -160,6 +160,139 @@ def run(bits_mode=True):
         win.close()
 
 
+def run_b(bits_mode=True):
+
+    conf = ss_timing.conf.get_conf("instruct")
+
+    image_files = os.listdir(conf.image_path)
+    image_files.sort(reverse=True)
+
+    image_files = [
+        os.path.join(conf.image_path, image_file)
+        for image_file in image_files
+        if image_file.endswith("b.png")
+    ]
+
+    (_, trial_dt, _) = ss_timing.data.get_data_dtype()
+
+    trial_info = np.zeros(1, dtype=trial_dt)[0]
+
+    win = psychopy.visual.Window(
+        size=conf.monitor_res_pix,
+        monitor=conf.monitor_name,
+        fullscr=True,
+        allowGUI=False,
+        autoLog=False,
+        units="deg",
+        gamma=1.0,
+        useFBO=True,
+        waitBlanking=False  # HACK
+    )
+
+    if bits_mode:
+
+        bits = psychopy.hardware.crs.BitsSharp(
+            win=win,
+            mode=conf.monitor_mode,
+            gamma="hardware",
+            portName=conf.monitor_port
+        )
+        bits.temporalDithering = False
+
+        pyglet.gl.glColorMask(1, 1, 0, 1)
+
+    try:
+
+        win.flip()
+
+        stim = ss_timing.stim.get_stim(conf, win)
+
+        # 01-0
+        stim["surr"].ori = 0.0
+        stim["surr"].contrast = 0.25
+        stim["image"].image = image_files.pop()
+        _draw_and_wait(
+            conf,
+            (
+                [stim["image"], stim["surr"], stim["fixation"]] +
+                stim["targets"].values()
+            ),
+            win
+        )
+
+        # 02-0
+        stim["surr"].ori = 90.0
+        stim["image"].image = image_files.pop()
+        _draw_and_wait(
+            conf,
+            (
+                [stim["image"], stim["surr"], stim["fixation"]] +
+                stim["targets"].values()
+            ),
+            win
+        )
+
+        # 03-0
+        stim["image"].image = image_files.pop()
+        _draw_and_wait(conf, [stim["image"]], win)
+
+        # 03-0
+        stim["image"].image = image_files.pop()
+        _draw_and_wait(conf, [stim["image"]], win)
+
+        # trials
+        n_trials = 15
+
+        trial_info["surr_onset"] = "sim"
+        trial_info["i_surr_onset"] = 1
+        trial_info["surr_contrast"] = 0.0
+
+        contrasts = np.logspace(
+            np.log10(0.05),
+            np.log10(0.2),
+            100
+        )
+
+        for _ in xrange(n_trials):
+
+            trial_info["surr_onset"] = np.random.choice(
+                conf.surr_onsets
+            )
+            trial_info["i_surr_onset"] = conf.surr_onsets.index(
+                trial_info["surr_onset"]
+            )
+
+            trial_info["surr_ori"] = np.random.choice(conf.surr_oris)
+
+            trial_info["surr_contrast"] = 0.25
+
+            trial_info["target_contrast"] = np.random.choice(contrasts)
+            trial_info["target_pos"] = np.random.choice(
+                conf.target_positions.keys()
+            )
+
+            _ = ss_timing.exp._run_trial(
+                conf=conf,
+                win=win,
+                stim=stim,
+                trial_data=trial_info
+            )
+
+        # 09-0
+        stim["image"].image = image_files.pop()
+        _draw_and_wait(conf, [stim["image"]], win)
+
+    except:
+
+        raise
+
+    finally:
+
+        if bits_mode:
+            bits.mode = "auto++"
+            bits.com.close()
+        win.close()
+
 def _draw_and_wait(conf, stim_to_draw, win):
 
     _ = [stim.draw() for stim in stim_to_draw]
