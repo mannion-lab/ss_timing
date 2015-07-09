@@ -4,6 +4,7 @@ import tempfile
 import numpy as np
 
 import matplotlib.pyplot as plt
+plt.ioff()
 
 import ss_timing.conf
 import ss_timing.data
@@ -44,6 +45,15 @@ def run():
     plot(conf, run_data)
 
     return run_data
+
+
+def plot_from_file(path):
+
+    conf = ss_timing.conf.get_conf("practice")
+
+    data = ss_timing.data.load_data(conf, path)
+
+    plot(conf, data)
 
 
 def plot(conf, data):
@@ -107,3 +117,5 @@ def plot(conf, data):
         ax.set_xscale("log")
 
         ax.set_ylim([-0.05, 1.05])
+
+    plt.show()

@@ -1,0 +1,37 @@
+#! /usr/bin/env python2
+
+"Handles command-line input for the ss timing experiment"
+
+import argparse
+
+import ss_timing.practice
+
+
+def main():
+    "Parse the command-line input and offload"
+
+    description = "Execute a session for the ss timing experiment"
+
+    fmt = argparse.ArgumentDefaultsHelpFormatter
+
+    parser = argparse.ArgumentParser(
+        description=description,
+        formatter_class=fmt
+    )
+
+    parser.add_argument(
+        "--data_file",
+        help="Plot a set of data",
+        nargs=1
+    )
+
+    args = parser.parse_args()
+
+    if args.data_file is None:
+        ss_timing.practice.run()
+    else:
+        ss_timing.practice.plot_from_file(args.data_file[0])
+
+
+if __name__ == "__main__":
+    main()
