@@ -25,13 +25,15 @@ def get_conf(subj_id):
 
     data_dir = {
         "djm_unsw": "/home/damien/venv_study/ss_timing/data",
-        "djm_1018_12": "/sci/study/ss_timing/data"
+        "djm_1018_12": "/sci/study/ss_timing/data",
+        "djm_1018_13": "/sci/study/ss_timing/data"
     }
     conf.data_path = data_dir[socket.gethostname()]
 
     image_dir = {
         "djm_unsw": "/home/damien/venv_study/ss_timing/code/ss_timing/images",
-        "djm_1018_12": "/sci/study/ss_timing/code/ss_timing/images"
+        "djm_1018_12": "/sci/study/ss_timing/code/ss_timing/images",
+        "djm_1018_13": "/sci/study/ss_timing/code/ss_timing/images"
     }
     conf.image_path = image_dir[socket.gethostname()]
 
