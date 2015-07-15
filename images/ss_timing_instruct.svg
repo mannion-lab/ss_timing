@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="ss_timing_instruct.svg"
-   inkscape:export-filename="/home/damien/sci/study/ss_timing/code/ss_timing/images/10b.png"
+   inkscape:export-filename="/home/damien/venv_study/ss_timing/code/ss_timing/images/03.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -36,8 +36,8 @@
      inkscape:current-layer="g3999"
      showgrid="false"
      units="px"
-     inkscape:window-width="1918"
-     inkscape:window-height="1059"
+     inkscape:window-width="2554"
+     inkscape:window-height="1417"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -76,7 +76,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -266,7 +266,7 @@
      inkscape:groupmode="layer"
      id="g4849"
      inkscape:label="03"
-     style="display:none">
+     style="display:inline">
     <flowRoot
        xml:space="preserve"
        id="flowRoot4851"
@@ -529,7 +529,7 @@
          id="flowPara3995" /><flowPara
          id="flowPara3997">Please call your experimenter to proceed.</flowPara></flowRoot>  </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="10"
      id="g3999"
      inkscape:groupmode="layer">
