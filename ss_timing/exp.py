@@ -140,6 +140,11 @@ def _run(
                 bits.com.close()
                 win.close()
 
+                print (
+                    "This is run number " +
+                    str(run_data["run_number"][0])
+                )
+
                 raise AssertionError(
                     "Monitor refresh was detected as {n:.03f}".format(
                         n=ms_avg
