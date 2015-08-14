@@ -121,22 +121,33 @@ def _run(
 
         pyglet.gl.glColorMask(1, 1, 0, 1)
 
-        # check the refresh
-        ms_avg = win.getMsPerFrame(nFrames=120)[0]
-        try:
+        max_attempts = 3
+        for attempt in xrange(max_attempts):
 
-            assert (
-                np.round(ms_avg, 2) ==
-                np.round(1.0 / 120 * 1000, 2)
-            )
+            # check the refresh
+            ms_avg = win.getMsPerFrame(nFrames=120)[0]
 
-        except AssertionError:
+            try:
 
-            bits.mode = "auto++"
-            bits.com.close()
-            win.close()
+                np.testing.assert_almost_equal(
+                    np.round(ms_avg, 2),
+                    np.round(1.0 / 120 * 1000, 2)
+                )
 
-            raise
+            except AssertionError:
+
+                bits.mode = "auto++"
+                bits.com.close()
+                win.close()
+
+                raise AssertionError(
+                    "Monitor refresh was detected as {n:.03f}".format(
+                        n=ms_avg
+                    )
+                )
+
+            else:
+                break
 
     try:
 
