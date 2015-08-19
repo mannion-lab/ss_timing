@@ -20,6 +20,15 @@ import ss_timing.data
 import ss_timing.stim
 
 
+class MonitorError(Exception):
+
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)
+
+
 def run(
     subj_id,
     run_num,
@@ -122,7 +131,7 @@ def _run(
         pyglet.gl.glColorMask(1, 1, 0, 1)
 
         max_attempts = 3
-        for attempt in xrange(max_attempts):
+        for _ in xrange(max_attempts):
 
             # check the refresh
             ms_avg = win.getMsPerFrame(nFrames=120)[0]
@@ -136,23 +145,27 @@ def _run(
 
             except AssertionError:
 
-                bits.mode = "auto++"
-                bits.com.close()
-                win.close()
-
-                print (
-                    "This is run number " +
-                    str(run_data["run_number"][0])
-                )
-
-                raise AssertionError(
-                    "Monitor refresh was detected as {n:.03f}".format(
-                        n=ms_avg
-                    )
-                )
+                pass
 
             else:
                 break
+
+        else:
+
+            bits.mode = "auto++"
+            bits.com.close()
+            win.close()
+
+            print (
+                "This is run number " +
+                str(run_data["run_number"][0])
+            )
+
+            raise MonitorError(
+                "Monitor refresh was detected as {n:.03f}".format(
+                    n=ms_avg
+                )
+            )
 
     try:
 

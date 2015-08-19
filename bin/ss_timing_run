@@ -46,12 +46,36 @@ def main():
 
     args = parser.parse_args()
 
-    ss_timing.exp.run(
-        args.subj_id,
-        args.run_num,
-        wait_at_end=not args.no_wait_at_end,
-        show_finish=args.show_finish
-    )
+    attempts = 0
+
+    max_attempts = 3
+
+    while attempts < max_attempts:
+
+        try:
+
+            ss_timing.exp.run(
+                args.subj_id,
+                args.run_num,
+                wait_at_end=not args.no_wait_at_end,
+                show_finish=args.show_finish
+            )
+
+        except ss_timing.exp.MonitorError as e:
+
+            print e.value
+
+        # only get here if no exceptions were raised
+        else:
+
+            break
+
+        attempts += 1
+
+    # only get here if the while loop becomes False
+    else:
+
+        raise ss_timing.exp.MonitorError("Maximum tries exceeded")
 
 
 if __name__ == "__main__":
