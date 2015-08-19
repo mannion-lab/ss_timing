@@ -139,8 +139,9 @@ def _run(
             try:
 
                 np.testing.assert_almost_equal(
-                    np.round(ms_avg, 2),
-                    np.round(1.0 / 120 * 1000, 2)
+                    ms_avg,
+                    1.0 / 120 * 1000,
+                    decimal=1
                 )
 
             except AssertionError:
